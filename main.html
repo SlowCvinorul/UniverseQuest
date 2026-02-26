@@ -1,0 +1,30 @@
+
+<html>
+<body>
+ <canvas id="myCanvas" width="400" height="300"></canvas>
+<script>
+ const canvas = document.getElementById('myCanvas');
+ const ctx = canvas.getContext('2d');
+ 
+ //ctx.translate(200, 150);
+ ctx.rotate(45 * Math.PI / 180);
+ ctx.scale(1.5, 0.8);
+ ctx.translate(200, 150);
+ ctx.translate(-200, -150);
+ 
+ ctx.fillRect(150, 100,50,50);
+ ctx.fillStyle = 'red';
+ ctx.fillRect(150, 100,50,50);
+ 
+ ctx.beginPath();
+ ctx.moveTo(150, 100);
+ ctx.lineTo(175, 75);
+ ctx.lineTo(200, 100);
+ ctx.closePath();
+ ctx.fillStyle = 'yellow';
+ ctx.fill();
+ 
+ 
+</script>
+</body>
+</html>
